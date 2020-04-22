@@ -1,0 +1,256 @@
+/*----------------------PAGE-------------
+---------------------------------------------*/
+
+body {
+	background-color: white;
+	margin: 0 auto;
+	font-family: "Roboto Condensed";
+}
+
+a {
+	text-decoration: none;
+}
+
+.fleche_scroll {
+	background-image: url(image/flèche.png);
+	background-size: 53px;
+	width: 53px;
+	height: 53px;
+	position: fixed;
+	top: 85%;
+	left: 92%;
+}
+
+/*Lorque l'utilisateur est en haut de la page*/
+#fleche_scroll_invisible {
+	transform: translateX(150px) ;
+	transition: transform 900ms ease-in-out;
+}
+
+/*Lorsque l'utilisateur fait défiler le site*/
+#fleche_scroll_visible {
+	transform: translateX(0);
+	transition: transform 900ms ease-in-out;
+}
+
+/*----------------------EN TETE-------------
+---------------------------------------------*/
+
+#en-tete {
+	background: url("image/header.jpg") no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 600px;
+    height: 600px;
+    font-weight: bold;
+}
+
+#overlay_noir {
+	background-color: rgba(0, 0, 0, 0.6);	
+	height: 100%;
+}
+
+/*----------------------#nav_normal-------------*/
+
+nav {
+	font-family: "Trebuchet MS";
+	display: flex;
+	align-items: center;
+	width: 100%;
+	justify-content: space-evenly;
+	
+}
+
+/*Lorque l'utilisateur est en haut de la page*/
+#nav_normal {
+	padding: 10px 0;
+	transition: 600ms ease-in-out;
+}
+
+/*Lorsque l'utilisateur fait défiler le site*/
+#nav_scrolled {
+	z-index: 2;
+	background-color: #fff;
+	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.06), 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+	position: fixed;
+	padding: 14px 0;
+	top: 0;
+	left: 0;
+	transition: 600ms ease-in-out;
+}
+
+nav a {
+	padding: 20px 10px;
+	border-radius: 10px;
+}
+
+#nav_normal a  {
+	color: white;
+	transition: 600ms ease-in-out;
+}
+
+#nav_scrolled a  {
+	color: #1392ff;
+	transition: 600ms ease-in-out;
+}
+
+#nav_scrolled a:hover{
+	background-color: #fffb71;
+}
+
+#nav_normal a:after {
+	display: block;
+	content: '';
+	transform: scaleX(0);  
+	transition: transform 250ms ease-in-out;
+	border-bottom-style: solid;  
+	border-bottom-width: 3px; 
+	border-bottom-color: #e9cc0e; 
+}
+
+#nav_normal a:hover:after { 
+	transform: scaleX(1); 
+}
+
+#nav_normal a.fromRight:after { 
+	transform-origin: 100% 50%; 
+}
+
+#nav_normal a.fromLeft:after {  
+	transform-origin:  0% 50%; 
+}
+
+/*----------------------HEADER-------------*/
+
+header {
+	z-index: 1;
+	margin-top: 100px;
+	text-align: center;
+	color: white;
+	position: absolute;
+	top: 175px;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+header h1 {
+	font-size: 50px;
+	margin: 0;
+}
+
+header h2 {
+	margin: 5px 0;
+}
+
+
+/*---------------------MAIN-------------
+---------------------------------------------*/
+
+main {
+	font-family: "Lucida Sans Unicode";
+	background-color: #fff;
+	color: #404852;
+	margin-bottom: 50px;
+}
+
+#auteur {
+	font-size: 15px;
+	text-align: right;
+	color: #808080;
+}
+
+#auteur::before {
+	display: inline-block;
+	background-image: url(image/avatar.png);
+	content: '';
+	background-size: 18px;
+	width: 18px;
+	height: 18px;
+	margin-right: 10px;
+}
+
+section {
+	margin: 20px 17%;
+	width: 66%;
+}
+
+section p {
+	font-size: 20px;
+}
+
+article {
+	width: 100%;
+}
+
+article h3 {
+	font-size: 25px;
+	padding: 10px 0;
+	width: 400px;
+}
+
+article h3:after {
+	display:block;
+  	content: '';
+  	width: 50px;
+  	margin-top: 10px;
+ 	border-bottom: solid 5px #5695fe;
+}
+
+article ul, article ol {
+	padding: 0;
+}
+
+article li {
+	margin: 0 0 0 20px;
+	font-size: 20px;
+}
+
+#journal_mots_cles li {
+	font-weight: bold;
+	margin-top: 40px;
+}
+
+.mots_cles {
+	font-style: italic;
+}
+
+.tabulation {
+	margin: 0 0 0 40px;
+}
+
+#questions li {
+	text-indent: 10px;
+}
+
+#articles_sources {
+	border-top: solid 2px #404852;
+	margin-top: 35px;
+}
+
+#articles_sources div {
+	display: inline-block;
+	width: 45%;
+}
+
+#articles_sources_droite {
+	float: right;
+}
+
+#articles_sources p {
+	font-size: 13px;
+}
+
+#contact ul {
+	margin-left: 40px;
+}
+
+/*---------------------FOOTER-------------
+---------------------------------------------*/
+
+footer {
+	background-color: #456bb2;
+	color: white;
+	text-align: center;
+	padding: 20px 0;
+	font-size: 15px;
+	font-weight: bold;
+}
